@@ -2,7 +2,7 @@ var UI = require('ui');
 var ajax = require('ajax');
 //var Settings = require('settings');
 
-// Connect to Edison and send POST data (state=ON | state=OFF)
+// Connect to Edison and send POST data (state=ON | state=OFF) 
 function request(state) {
 ajax(
   {

@@ -29,14 +29,14 @@
                 "type": "font"
             },
             {
-                "file": "images/LEDoff.png",
-                "name": "IMAGES_LEDOFF_PNG",
-                "type": "bitmap"
-            },
-            {
                 "file": "images/LEDon.png",
                 "menuIcon": true,
                 "name": "IMAGES_LEDON_PNG",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/LEDoff.png",
+                "name": "IMAGES_LEDOFF_PNG",
                 "type": "bitmap"
             }
         ]
