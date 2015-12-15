@@ -24,7 +24,7 @@ def on(pin=None):
 @post('/')
 def toggle():
     state = request.forms.get("state")
-    if state=="ON":
+    if state=="LED ON":
         print("ON")
         on()
     else:
