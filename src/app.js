@@ -1,12 +1,11 @@
 var UI = require('ui');
 var ajax = require('ajax');
-//var Settings = require('settings');
 
-// Connect to Edison and send POST data (state=ON | state=OFF) 
+// Connect to web server and send POST data (state=ON | state=OFF) 
 function request(state) {
 ajax(
   {
-    url: 'http://192.168.2.35:5000',
+    url: 'http://192.168.2.73:5000',
     method: 'post',
     data: {state:state}
   },
@@ -19,46 +18,34 @@ ajax(
 );
 }
 
-function request2() {
-ajax(
-  {
-    url: 'http://192.168.1.105/gpio.php?pic=0',
-    method: 'get',
-    data: {}
-  },
-  function(data) {
-    console.log(data);
-  },
-  function(error) {
-    console.log('The ajax request failed: ' + error);
-  }
-);  
-}
-
 // Make a list of menu items (ON/OFF)
 var states = [
   {
     title: "ON",
-    icon: "images/LEDon.png"
+    //icon: "images/on.bmp"
   },
   {
     title: "OFF",
-    icon: "images/LEDoff.png"
+    //icon: "images/off.bmp"
   }
 ];
 
 // Create the Menu
 var menu = new UI.Menu({
+  backgroundColor: 'black',
+  textColor: 'orange',
+  highlightBackgroundColor: 'rajah',
+  highlightTextColor: 'black',
   sections: [{
     title: 'LED State',
     items: states
   }]
 });
 
+
 // Send command when menu item is selected
 menu.on('select', function(e) {
   request(e.item.title);
-  request2();
 });
       
 menu.show();
