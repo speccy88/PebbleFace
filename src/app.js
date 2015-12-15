@@ -21,12 +21,10 @@ ajax(
 // Make a list of menu items (ON/OFF)
 var states = [
   {
-    title: "ON",
-    //icon: "images/on.bmp"
+    title: "LED ON"
   },
   {
-    title: "OFF",
-    //icon: "images/off.bmp"
+    title: "LED OFF"
   }
 ];
 
